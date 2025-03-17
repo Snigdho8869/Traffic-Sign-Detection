@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Sign Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Traffic Sign Detection</h1>
+            <p>Upload an image to detect the traffic sign.</p>
+        </header>
+
+        <div class="upload-section">
+            <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+                <label for="image" class="file-upload-label">
+                    <span>Choose Image</span>
+                    <input type="file" id="image" name="image" accept="image/*" hidden>
+                </label>
+                <div id="preview-container">
+                    <img id="preview" src="#" alt="Image Preview">
+                </div>
+                <button type="submit" id="predict-btn">Detect Sign</button>
+            </form>
+        </div>
+
+        <div id="result-section">
+            <h2>Detection Result</h2>
+            <div id="prediction" class="prediction-text"></div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Traffic Sign Detection. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+</body>
+</html>
