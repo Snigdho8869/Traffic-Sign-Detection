@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #262626;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background: #45a049;
+}
+
+#preview-container {
+    margin: 20px 0;
+    display: none;
+}
+
+#preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#predict-btn {
+    padding: 12px 24px;
+    background: #336699;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#predict-btn:hover {
+    background: #2e5c8a;
+}
+
+#result-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.prediction-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+}
